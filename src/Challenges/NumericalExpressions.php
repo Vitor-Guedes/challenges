@@ -17,6 +17,19 @@ class NumericalExpressions extends Challenge
      */
     public function resolve()
     {
+        $options = getopt('', ["expression::"]);
+
+        if (isset($options['expression'])) {
+            try {
+                $results = [];
+                $expression = $options['expression'];
+                $results[$expression] = $this->resolveExpression($expression);
+            } catch (Exception $e) {
+                $results[$expression] = $e->getMessage();
+            }
+            return $results;
+        }
+
         if (! $this->hasFile()) {
             return ;
         }

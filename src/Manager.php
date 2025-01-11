@@ -2,6 +2,8 @@
 
 namespace Guedes\Challenges;
 
+use Exception;
+
 class Manager
 {
     /** 
@@ -53,6 +55,14 @@ class Manager
         $content = file_get_contents(__DIR__ . '/MapperChallenges.json');
 
         $mapper = json_decode($content, true);
+
+        if (! isset($this->options['c'])) {
+            throw new Exception('Nenhum comando passado');
+        }
+
+        if (! isset($mapper['commands'][$this->options['c']])) {
+            throw new Exception('Comando não mapeado');
+        }
 
         $this->challenge = new $mapper['commands'][$this->options['c']];
     }
