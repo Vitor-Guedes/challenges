@@ -31,7 +31,7 @@ class NumericalExpressions extends Challenge
         }
 
         if (! $this->hasFile()) {
-            return ;
+            return [];
         }
 
         $content = $this->getFileContent();
@@ -225,16 +225,5 @@ class NumericalExpressions extends Challenge
         });
 
         return $sorteredOperator;
-    }
-
-    /**
-     * @return string
-     */
-    protected function getFileContent(): string
-    {
-        if (! $this->fileExists()) {
-            throw new Exception('Arquido passado não existe.');
-        }
-        return file_get_contents($this->getFile());
     }
 }

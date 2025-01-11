@@ -42,4 +42,15 @@ abstract class Challenge
     {
         return file_exists(__DIR__ . '/files/' . $this->file);
     }
+
+    /**
+     * @return string
+     */
+    protected function getFileContent(): string
+    {
+        if (! $this->fileExists()) {
+            throw new \Exception('Arquido passado não existe.');
+        }
+        return file_get_contents($this->getFile());
+    }
 }
