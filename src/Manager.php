@@ -38,11 +38,15 @@ class Manager
      */
     public function resolve(): mixed
     {
-        $this->identifyChallenge();
+        try {
+            $this->identifyChallenge();
 
-        $this->defineOptions();
+            $this->defineOptions();
 
-        return $this->challenge->resolve();
+            return $this->challenge->resolve();
+        } catch (Exception $e) {
+            return "Error: " . $e->getMessage() . PHP_EOL; 
+        }
     }
 
     /**

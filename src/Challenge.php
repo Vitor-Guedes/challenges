@@ -7,7 +7,7 @@ namespace Guedes\Challenges;
  */
 abstract class Challenge
 {
-    protected string $file;
+    protected string $file = '';
 
     abstract public function resolve();
 
@@ -27,7 +27,7 @@ abstract class Challenge
      */
     public function hasFile(): bool
     {
-        return $this->file !== null;
+        return $this->file !== '';
     }
 
     /**
