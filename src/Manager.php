@@ -46,6 +46,26 @@ class Manager
     }
 
     /**
+     * @param mixed $content
+     * 
+     * @return void
+     */
+    public function show($content): void
+    {
+        if (is_array($content)) {
+            echo json_encode($content, JSON_PRETTY_PRINT) . PHP_EOL;
+            return ;
+        }
+
+        if (is_object($content)) {
+            echo serialize($content) . PHP_EOL;
+            return ;
+        }
+
+        echo $content . PHP_EOL;
+    }
+
+    /**
      * Identify Challenge by optoin 'c' value in src/MapperChallenges.json
      * 
      * @return void

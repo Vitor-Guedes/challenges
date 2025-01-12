@@ -1,0 +1,21 @@
+{
+    "name": "guedes/challenges",
+    "description": "Projeto para gerenciar e resover desafios",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Guedes\\Challenges\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vitor Guedes",
+            "email": "vtrf2.0@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.3"
+    }
+}

@@ -5,6 +5,11 @@ namespace Guedes\Challenges\Challenges;
 use Exception;
 use Guedes\Challenges\Challenge;
 
+/**
+ * https://osprogramadores.com/desafios/d12/
+ * 
+ * Desafio - Potência de 2
+ */
 class PowerOfTwo extends Challenge
 {
     /**

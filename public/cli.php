@@ -6,4 +6,6 @@ include __DIR__ . '/../vendor/autoload.php';
 
 $options = getopt("c:f:");
 
-(new Manager($options))->resolve();
+$manager = new Manager($options);
+$solution = $manager->resolve();
+$manager->show($solution);

@@ -2,6 +2,9 @@
 
 namespace Guedes\Challenges;
 
+/**
+ * Abstract Class to implement challenges
+ */
 abstract class Challenge
 {
     protected string $file;
