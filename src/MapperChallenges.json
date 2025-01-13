@@ -1,6 +1,7 @@
 {
     "commands": {
         "ne": "\\Guedes\\Challenges\\Challenges\\NumericalExpressions",
-        "pot": "\\Guedes\\Challenges\\Challenges\\PowerOfTwo"
+        "pot": "\\Guedes\\Challenges\\Challenges\\PowerOfTwo",
+        "bb": "\\Guedes\\Challenges\\Challenges\\BigBase"
     }
 }
